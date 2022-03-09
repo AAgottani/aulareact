@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
+import Tasks from './components/Tasks'
 
 const App = ()=>{
   // let message= 'Hello World'
@@ -12,21 +13,32 @@ const App = ()=>{
     },
     {
         id: 2,
-            title:'ler livros',
+        title:'ler livros',
         completed: true,
 
-        }
-
-
+        },
+        {
+          id: 2,
+          title:'ler livros',
+          completed: true,
+  
+          },
+          {
+            id: 2,
+            title:'ler livros',
+            completed: true,
+    
+            }
+          
 
   ]);
   return(
     <div>
 
-    <div className='container'>{message} </div>
-
-    <button onClick={()=> setMessage ("hellooo")} > Mudar Mensagem </button>
-
+    <div className='container'>{}
+    <Tasks tasks={tasks}/>
+     </div>
+   
     </div>
   );
 };
